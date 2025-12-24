@@ -1,0 +1,27 @@
+[
+    {
+        "institut": "Haute-École Frida Kahlo",
+        "fichier": "he_frida_kahlo.csv",
+        "participants": 127
+    },
+    {
+        "institut": "Institut Ada Lovelace",
+        "fichier": "inst_ada_lovelace.csv",
+        "participants": 392
+    },
+    {
+        "institut": "Université Haine-Saint-Pierre - Borinage",
+        "fichier": "uni_hsp_borinage.csv",
+        "participants": 61
+    },
+    {
+        "institut": "Alan Turing School of Informatics",
+        "fichier": "turing_school_inf.csv",
+        "participants": 87
+    },
+    {
+        "institut": "École Supérieure des Arts et Technologies",
+        "fichier": "arts_et_technos.csv",
+        "participants": 6
+    }
+]

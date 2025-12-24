@@ -15,7 +15,8 @@ def charger_instituts(repertoire: str) -> list[dict]:
 
     instituts: list[dict] = []
 
-    ## -- votre code ici -- ##
+    with open(fichier, "r") as fp:
+        instituts: list[dict] = json.load(fp)
 
     return instituts
 
@@ -51,7 +52,8 @@ def charger_donnees_etude(fichiers: list[str]) -> tuple[list[str], list[list[str
     noms_colonnes: list[str] = []
 
     for fichier in fichiers:
-        donnees_fichier = []
+        noms_colonnes, donnes_du_fichier = charger_donnees_institut(fichier)
+        donnees.extend(donnes_du_fichier)         
         
         ## -- votre code ici -- ##
 

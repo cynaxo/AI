@@ -21,7 +21,7 @@ def calculer_moyennes(x: np.ndarray, y: np.ndarray, colonne: int) -> tuple[float
 
     ## -- votre code ici -- ##
 
-    return 
+    return np.mean(x[y==True, colonne]), np.mean(x[y==False, colonne])
 
 
 def scatterplot(x: np.ndarray, y: np.ndarray, colonne_x: int, colonne_y: int) -> Figure:

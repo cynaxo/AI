@@ -42,6 +42,7 @@ def convertir_donnees(donnees: list[list[str]]) -> np.ndarray:
 
     ## -- votre code ici -- ##
     ## n'oubliez pas d'ajouter la valeur de return! ##
+    
 
     return 
 

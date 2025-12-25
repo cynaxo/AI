@@ -16,6 +16,19 @@ def filtrer_donnees_manquantes(donnees: list[list[str]]) -> list[list[str]]:
     donnees_filtrees = []
 
     ## -- votre code ici -- ##
+    for line in donnees:
+        lineOk = True
+        for data in line:
+            if(data == 'nan'):
+                lineOk = False
+                break
+        if(lineOk):
+            donnees_filtrees.append(line)
+
+    # ou autre solution:
+
+    # return [line for line in donnes if 'nan' not in line]
+                
 
     return donnees_filtrees
 

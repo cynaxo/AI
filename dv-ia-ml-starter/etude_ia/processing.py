@@ -44,7 +44,7 @@ def convertir_donnees(donnees: list[list[str]]) -> np.ndarray:
     ## n'oubliez pas d'ajouter la valeur de return! ##
     
 
-    return 
+    return np.array(donnees).astype('int')
 
 
 def preparer_dataset(donnees: np.ndarray) -> tuple[np.ndarray, 
@@ -65,8 +65,11 @@ def preparer_dataset(donnees: np.ndarray) -> tuple[np.ndarray,
 
     Ytest et Ytrain doivent contenir des valeurs booléennes
     """
+    X = donnees[:,:-1] # toutes les lignes et colonnes sauf la dernière
+    Y = donnees[:, -1]>50 
 
     ## -- votre code ici -- ##
     ## n'oubliez pas d'ajouter la valeur de return! ##
+    Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, stratify=Y)
 
-    return 
+    return Xtrain, Xtest, Ytrain, Ytest

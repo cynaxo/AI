@@ -18,8 +18,10 @@ def entrainer_arbre_decision(x: np.ndarray, y: np.ndarray) -> DecisionTreeClassi
     
     ## -- votre code ici -- ##
     ## n'oubliez pas d'ajouter la valeur de return! ##
+    clf = DecisionTreeClassifier(max_depth=4)
+    clf.fit(x,y)
     
-    return
+    return clf
 
 
 def evaluer_arbre_decision(clf: DecisionTreeClassifier, 
@@ -33,7 +35,17 @@ def evaluer_arbre_decision(clf: DecisionTreeClassifier,
     score_train = 0.
     score_test = 0.
 
-    ## -- votre code ici -- ##
+    # train data
+    pred_train = clf.predict(x_train)
+    correct_train = pred_train==y_train
+    score_train = sum(correct_train)/len(correct_train)
+
+
+    # test data
+    pred_tes = clf.predict(x_test)
+    correct_test = pred_tes==y_test
+    score_test = sum(correct_test)/len(correct_test)
+
 
     return score_train, score_test
 
